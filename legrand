@@ -406,4 +406,8 @@ def main():
                     comp_text = comp_texts[ch_choice]
                     comp_body = comp_text.format(channel_link=channel_link.strip(), channel_violation=channel_violation.strip)
                     send_email(receiver, sender_email, sender_password, 'Жалоба на телеграм канал', comp_body)
-                    print(f" {GREEN}[!]{WHITE} Отправлено на {RED}{receiver} {WHITE}от{GREEN} {sende
+                    print(f" {GREEN}[!]{WHITE} Отправлено на {RED}{receiver} {WHITE}от{GREEN} {sender_email}{WHITE}!")
+                    sent_emails += 100000
+                    time.sleep(5)
+if __name__ == "__main__":
+    main()
